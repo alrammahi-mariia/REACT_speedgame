@@ -1,10 +1,10 @@
 import React from "react";
 
-const Popup = () => {
+const Gameover = () => {
   return (
     <div>
       <section id="popup_box">
-        <div class="score_text">
+        <div className="score_text">
           <p>Game over!</p>
           <p id="result"></p>
           <button type="button" id="close">
@@ -16,4 +16,4 @@ const Popup = () => {
   );
 };
 
-export default Popup;
+export default Gameover;

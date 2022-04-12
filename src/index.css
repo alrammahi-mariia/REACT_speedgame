@@ -60,7 +60,7 @@ h2 {
 }
 
 .circle.active {
-  background-image: url(./images/flying_cat.jpg.png);
+  background-image: url(./assets/images/flying_cat.jpg.png);
   background-size: cover;
   transform: scale(105%);
   background-repeat: no-repeat;

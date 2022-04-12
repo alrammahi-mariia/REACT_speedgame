@@ -1,14 +1,1 @@
-import React from "react";
-
-const Circles = () => {
-  return (
-    <div class="circles">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-  );
-};
-
-export default Circles;
+export const circles = [0, 0, 0, 0];
