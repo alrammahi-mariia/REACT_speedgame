@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This app was created a part of the React Basic course at Business College Helsinki.
+This app was created as a part of the React Basic course at Business College Helsinki.
 
 ## Technologies
 
