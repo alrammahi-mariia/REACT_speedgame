@@ -19,6 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Deployment
 
-You can view the deployed version at: 
+You can view a deployed version at: 
 
 
