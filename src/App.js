@@ -7,15 +7,16 @@ import "./index.css";
 
 import startMusic from "./assets/sounds/space_cats.mp3";
 import stopMusic from "./assets/sounds/16 - Game Over.mp3";
-// import click from "./assets/sounds/12 - World Clear.mp3";
+import click from "./assets/sounds/click.wav";
 
-// const clickSound = new Audio(click);
+const clickSound = new Audio(click);
 const startSound = new Audio(startMusic);
 const stopSound = new Audio(stopMusic);
 
+//function to get a random integer
 const getRndInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}; //function to get a random integer
+};
 
 class App extends Component {
   state = {
@@ -27,23 +28,24 @@ class App extends Component {
     gameOn: false,
   };
 
-  timer = undefined; // set global variable for setTimeout
+  // set global variable for setTimeout
+  timer = undefined;
 
-  // clickPlay = () => {
-  //   if (clickSound.paused) {
-  //     clickSound.play();
-  //   } else {
-  //     clickSound.currentTime = 0;
-  //   }
-  // };
+  clickPlay = () => {
+    if (clickSound.paused) {
+      clickSound.play();
+    } else {
+      clickSound.currentTime = 0;
+    }
+  };
 
   clickHandler = (i) => {
-    // this.clickPlay();
+    this.clickPlay();
     if (this.state.current !== i) {
       this.stopHandler();
       return;
     }
-    console.log("clickHandler, circle number:", i);
+    // console.log("clickHandler, circle number:", i);
     this.setState({
       score: this.state.score + 10,
       rounds: this.state.rounds - 1,
@@ -68,14 +70,14 @@ class App extends Component {
       pace: this.state.pace * 0.95,
       rounds: this.state.rounds + 1,
     });
-    console.log("rounds", this.state.rounds);
+    // console.log("rounds", this.state.rounds);
 
     this.timer = setTimeout(this.nextCircle, this.state.pace); //JS method setTimeout, read up in the MDN, clearTimeout
   };
 
   startHandler = () => {
     startSound.play();
-    // startSound.loop = true;
+    startSound.loop = true;
     this.nextCircle();
     this.setState({ gameOn: true });
   };
@@ -90,11 +92,11 @@ class App extends Component {
   closeHandler = () => {
     window.location.reload();
     //or can do:
-    this.setState({
-      showGameOver: false,
-      score: 0,
-      current: -1,
-    });
+    // this.setState({
+    //   showGameOver: false,
+    //   score: 0,
+    //   current: -1,
+    // });
   };
 
   render() {

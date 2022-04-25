@@ -7,7 +7,7 @@ const Circle = (props) => {
       className={`circle ${props.active ? "active" : ""}`} // based on the active state update the className of the circle to display an image
       onClick={props.click}
     >
-      {props.id};
+      {/* {props.id}; */}
     </div>
   );
 };

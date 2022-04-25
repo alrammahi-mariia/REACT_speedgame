@@ -6,7 +6,8 @@ const Gameover = (props) => {
       <section id="popup_box">
         <div className="score_text">
           <p>Game over!</p>
-          <p id="result">{props.score}</p>
+          <p id="result">Your score is: {props.score}</p>
+          <p id="message">{props.message}</p>
           <button type="button" id="close" onClick={props.click}>
             Close
           </button>
